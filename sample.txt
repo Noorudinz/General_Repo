@@ -3,6 +3,7 @@ Notepad++ v8.1.1 bug-fixes:
 1. Fix edit zone not being applied to dark mode issue on another user account in the same machine.
 2. Enhance dark mode (make user interface more dark-modable).
 
+Today learned gits hv added on this line
 
 Notepad++ v8.1 bug-fixes & enhancements:
 
