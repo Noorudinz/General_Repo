@@ -6,12 +6,6 @@
 @using Syncfusion.Blazor.Navigations
 @inject Blazored.LocalStorage.ILocalStorageService localStorage
 
-@*<SfGrid DataSource="@OrderList" AllowPaging="true"
-    AllowSorting="true"
-    AllowGrouping="true"
-    AllowFiltering="true">*@
-
-
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="OrderList" Toolbar="@(new List<string>() { "ExcelExport","PdfExport","Search" })"
         AllowPaging="true"

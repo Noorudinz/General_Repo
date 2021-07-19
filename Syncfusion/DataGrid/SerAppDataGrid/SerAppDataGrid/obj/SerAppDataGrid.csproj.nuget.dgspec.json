@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Program\\Syncfusion\\DataGrid\\SerAppDataGrid\\SerAppDataGrid\\SerAppDataGrid.csproj": {}
+    "D:\\Program\\SamplesOnGit\\Syncfusion\\DataGrid\\SerAppDataGrid\\SerAppDataGrid\\SerAppDataGrid.csproj": {}
   },
   "projects": {
-    "D:\\Program\\Syncfusion\\DataGrid\\SerAppDataGrid\\SerAppDataGrid\\SerAppDataGrid.csproj": {
+    "D:\\Program\\SamplesOnGit\\Syncfusion\\DataGrid\\SerAppDataGrid\\SerAppDataGrid\\SerAppDataGrid.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Program\\Syncfusion\\DataGrid\\SerAppDataGrid\\SerAppDataGrid\\SerAppDataGrid.csproj",
+        "projectUniqueName": "D:\\Program\\SamplesOnGit\\Syncfusion\\DataGrid\\SerAppDataGrid\\SerAppDataGrid\\SerAppDataGrid.csproj",
         "projectName": "SerAppDataGrid",
-        "projectPath": "D:\\Program\\Syncfusion\\DataGrid\\SerAppDataGrid\\SerAppDataGrid\\SerAppDataGrid.csproj",
+        "projectPath": "D:\\Program\\SamplesOnGit\\Syncfusion\\DataGrid\\SerAppDataGrid\\SerAppDataGrid\\SerAppDataGrid.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "D:\\Program\\Syncfusion\\DataGrid\\SerAppDataGrid\\SerAppDataGrid\\obj\\",
+        "outputPath": "D:\\Program\\SamplesOnGit\\Syncfusion\\DataGrid\\SerAppDataGrid\\SerAppDataGrid\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
