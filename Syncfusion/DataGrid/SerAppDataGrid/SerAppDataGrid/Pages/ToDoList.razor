@@ -1,0 +1,53 @@
+﻿
+<h3>Todo List</h3>
+
+@using Syncfusion.Blazor.Inputs;
+@using Syncfusion.Blazor.Buttons;
+@using Syncfusion.Blazor.Lists;
+
+<div class="form-group">
+    <SfTextBox @oninput="UpdateItem" @bind-Value="@item" Placeholder="Add new   item" Width="200px"></SfTextBox>
+
+    <SfButton @onclick="AddItem">Add</SfButton>
+</div>
+
+
+@if (items.Count > 0)
+{
+    <SfListView DataSource="@items">
+        <ListViewFieldSettings TValue="ItemModel" Id="Id" Text="Text"></ListViewFieldSettings>
+    </SfListView>
+}
+
+@code {
+    private string item;
+    private List<ItemModel> items = new List<ItemModel>();
+
+    private void UpdateItem(Microsoft.AspNetCore.Components.ChangeEventArgs args)
+    {
+        item = args.Value.ToString();
+    }
+
+    // Add new items on button click.
+    private void AddItem()
+    {
+        if (item != null && item.Length > 0)
+        {
+            var newItem = new ItemModel(items.Count + 1, item);
+            items.Add(newItem);
+            item = null;
+        }
+    }
+
+    // List view data source model.
+    public class ItemModel
+    {
+        public ItemModel(int id, string text)
+        {
+            Id = id;
+            Text = text;
+        }
+        public int Id { get; set; }
+        public string Text { get; set; }
+    }
+}

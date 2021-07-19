@@ -1,0 +1,5 @@
+D:\Program\Syncfusion\EntityFramework\EntityFramework\EFGrid - CRUD - P6\EFGrid.Server\obj\Debug\netcoreapp3.0\EFGrid.Server.csproj.AssemblyReference.cache
+D:\Program\Syncfusion\EntityFramework\EntityFramework\EFGrid - CRUD - P6\EFGrid.Server\obj\Debug\netcoreapp3.0\EFGrid.Server.AssemblyInfoInputs.cache
+D:\Program\Syncfusion\EntityFramework\EntityFramework\EFGrid - CRUD - P6\EFGrid.Server\obj\Debug\netcoreapp3.0\EFGrid.Server.AssemblyInfo.cs
+D:\Program\Syncfusion\EntityFramework\EntityFramework\EFGrid - CRUD - P6\EFGrid.Server\obj\Debug\netcoreapp3.0\EFGrid.Server.csproj.CoreCompileInputs.cache
+D:\Program\Syncfusion\EntityFramework\EntityFramework\EFGrid - CRUD - P6\EFGrid.Server\obj\Debug\netcoreapp3.0\EFGrid.Server.MvcApplicationPartsAssemblyInfo.cache
