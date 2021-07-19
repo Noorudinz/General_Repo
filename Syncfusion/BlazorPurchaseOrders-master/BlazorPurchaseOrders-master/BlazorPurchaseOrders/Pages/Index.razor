@@ -1,0 +1,113 @@
+﻿@page "/"
+@using BlazorPurchaseOrders.Data
+
+@inject IPOHeaderService POHeaderService
+@inject NavigationManager NavigationManager
+
+<div class="col-sm-12">
+    <h3>Purchase Orders</h3>
+    <br />
+    <SfGrid DataSource="@poheader"
+            Toolbar="Toolbaritems">
+        <GridEvents RowSelected="RowSelectHandler" OnToolbarClick="ToolbarClickHandler" TValue="POHeader"></GridEvents>
+        <GridColumns>
+            <GridColumn Field="@nameof(POHeader.POHeaderOrderNumber)"
+                        HeaderText="No"
+                        TextAlign="@TextAlign.Left"
+                        Width="10">
+            </GridColumn>
+            <GridColumn Field="@nameof(POHeader.POHeaderOrderDate)"
+                        HeaderText="Date"
+                        Format="d"
+                        Type="ColumnType.Date"
+                        TextAlign="@TextAlign.Center"
+                        Width="15">
+            </GridColumn>
+            <GridColumn Field="@nameof(POHeader.SupplierName)"
+                        HeaderText="Supplier"
+                        TextAlign="@TextAlign.Left"
+                        Width="40">
+            </GridColumn>
+            <GridColumn Field="@nameof(POHeader.TotalOrderValue)"
+                        HeaderText="Value"
+                        TextAlign="@TextAlign.Right"
+                        Format="C2"
+                        Width="20">
+            </GridColumn>
+            <GridColumn Field="@nameof(POHeader.POHeaderRequestedBy)"
+                        HeaderText="Requested by"
+                        TextAlign="@TextAlign.Left"
+                        Width="40">
+            </GridColumn>
+        </GridColumns>
+    </SfGrid>
+
+    <WarningPage @ref="Warning" WarningHeaderMessage="@WarningHeaderMessage" WarningContentMessage="@WarningContentMessage" />
+
+</div>
+
+@code {
+
+    // Create an empty list, named poheader, of empty POHeader objects.
+    IEnumerable<POHeader> poheader;
+
+    private List<ItemModel> Toolbaritems = new List<ItemModel>();
+
+    int POHeaderID = 0;
+
+    private int selectedPOHeaderID { get; set; } = 0;
+
+    WarningPage Warning;
+    string WarningHeaderMessage = "";
+    string WarningContentMessage = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        //Populate the list of countries objects from the Countries table.
+        poheader = await POHeaderService.POHeaderList();
+
+        Toolbaritems.Add(new ItemModel() { Text = "Add", TooltipText = "Add a new order", PrefixIcon = "e-add" });
+        Toolbaritems.Add(new ItemModel() { Text = "Edit", TooltipText = "Edit selected order", PrefixIcon = "e-edit" });
+        Toolbaritems.Add(new ItemModel() { Text = "Delete", TooltipText = "Delete selected order", PrefixIcon = "e-delete" });
+    }
+
+
+    public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Text == "Add")
+        {
+            //Code for adding goes here
+            POHeaderID = 0;
+            NavigationManager.NavigateTo($"/purchaseorder/{POHeaderID}");
+
+        }
+
+        if (args.Item.Text == "Edit")
+        {
+
+            //Code for editing - Check that an Order has been selected from the grid
+            if (selectedPOHeaderID == 0)
+            {
+                WarningHeaderMessage = "Warning!";
+                WarningContentMessage = "Please select an Order from the grid.";
+                Warning.OpenDialog();
+            }
+            else
+            {
+                NavigationManager.NavigateTo($"/purchaseorder/{selectedPOHeaderID}");
+            }
+
+        }
+
+        if (args.Item.Text == "Edit")
+        {
+            //Code for deleting
+        }
+    }
+
+    public void RowSelectHandler(RowSelectEventArgs<POHeader> args)
+    {
+        //{args.Data} returns the current selected records.
+        selectedPOHeaderID = args.Data.POHeaderID;
+    }
+}
