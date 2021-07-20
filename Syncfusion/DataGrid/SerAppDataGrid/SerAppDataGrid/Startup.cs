@@ -38,7 +38,6 @@ namespace SerAppDataGrid
             });
             services.AddSyncfusionBlazor();
             services.AddBlazoredLocalStorage();
-      
             services.AddDbContext<OrdersContext>(opt =>
             opt.UseSqlServer(Configuration.GetConnectionString("OrdersDetailsDatabase")));
             
@@ -61,7 +60,6 @@ namespace SerAppDataGrid
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-         
 
             app.UseRouting();
 
