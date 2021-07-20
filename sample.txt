@@ -1,1 +1,2 @@
 Must learn git stash and other cmds
+learn more
