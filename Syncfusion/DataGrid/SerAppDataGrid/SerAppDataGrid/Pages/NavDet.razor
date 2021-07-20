@@ -1,166 +1,66 @@
 ﻿@page "/sample"
 
 
-@using Syncfusion.Blazor;
-@using Syncfusion.Blazor.Data;
-@using Newtonsoft.Json
-@using static SerAppDataGrid.Pages.Index1;
-@using Microsoft.Data.SqlClient;
-@using System.Data;
-@using System.IO;
-@using Microsoft.AspNetCore.Hosting;
-@inject IHostingEnvironment _env
+<!DOCTYPE html>
 
-@inherits DataAdaptor<Order>
+@*<html>
 
-<CascadingValue Value="@this">
-    @ChildContent
-</CascadingValue>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/site.css">
+</head>
 
-@code {
-    [Parameter]
-    [JsonIgnore]
-    public RenderFragment ChildContent { get; set; }
+<body>*@
 
-    public static DataSet CreateCommand(string queryString, string connectionString)
-    {
-        using (SqlConnection connection = new SqlConnection(
-                   connectionString))
-        {
-            SqlDataAdapter adapter = new SqlDataAdapter(queryString, connection);
-            DataSet dt = new DataSet();
-            try
-            {
-                connection.Open();
+    <main role="main">
+        <div>
+            <div class="jumbotron">
+                <div class="container">
+                    <h1 class="display-4">Apple pie</h1>
+                    <p class="lead">Our famous, number-one selling pie.</p>
+                </div>
+            </div>
+            <!-- <h1 class="mb-3">Apple pie
+                <small>Our famous, number-one selling pie.</small>
+            </h1> -->
+            <div class="alert alert-success ">
+                <strong>Success!</strong> Apple pie was added to your shopping cart.
+            </div>
+            <div class="p-4">
+                <div>
+                    <img src="images/products/applepie.jpg" class="rounded" alt="Image of apple pie">
+                </div>
 
-                // Using sqlDataAdapter, we process the query string and fill the data into the dataset
+                <div>
+                    <h3>About this pie</h3>
+                    <p>
+                        Sweet ice cream jelly beans lemon drops. Pastry toffee fruitcake gingerbread jelly-o.
+                        Lollipop sesame snaps muffin. Macaroon halvah marshmallow sesame snaps sugar plum dragée.
+                        Wafer pudding sesame snaps tootsie roll sesame snaps cake chupa chups jelly beans.
+                    </p>
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li>Apple</li>
+                        <li>Sugar</li>
+                        <li>Eggs</li>
+                        <li>Milk</li>
+                    </ul>
+                    <div>
+                        <div>
+                            <strong>$14.95</strong>
+                        </div>
+                        <div class="m-4">
+                            <a type="button" href="shoppingbasket.html" class="btn btn-success">
+                                Add to basket
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+@*</body>
 
-                adapter.Fill(dt);
-            }
-            catch (SqlException se)
-            {
-                Console.WriteLine(se.ToString());
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return dt;
-        }
-    }
-
-    // Performs data Read operation
-    // DataManagerRequest defines the members of the query
-
-    public override object Read(DataManagerRequest DataManagerReq, string Key = null)
-    {
-    
-        string ConnectionStr = $"Data Source=DESKTOP-TAQKU6P\\SQLEXPRESS;Initial Catalog=Orders;Integrated Security=True;Connect Timeout=30";
-
-        // Here, we formed the SQL query string based on the skip and take count from the DataManagerRequest
-
-        string QueryStr = "SELECT OrderID, CustomerID FROM dbo.Orders ORDER BY OrderID OFFSET " + DataManagerReq.Skip + " ROWS FETCH NEXT " + DataManagerReq.Take + " ROWS ONLY;";
-        DataSet Data = CreateCommand(QueryStr, ConnectionStr);
-        Orders = Data.Tables[0].AsEnumerable().Select(r => new Order
-        {
-            OrderID = r.Field<Int32>("OrderID"),
-            CustomerID = r.Field<string>("CustomerID")
-        }).ToList();  // Here, we convert dataset into list
-        IEnumerable<Order> DataSource = Orders;
-        SqlConnection Con = new SqlConnection(ConnectionStr);
-        Con.Open();
-        SqlCommand Cmd = new SqlCommand("SELECT COUNT(*) FROM dbo.Orders", Con);
-        Int32 Count = (Int32)Cmd.ExecuteScalar();
-        return DataManagerReq.RequiresCounts ? new DataResult() { Result = DataSource, Count = Count } : (object)DataSource;
-    }
-
-
-    // Performs Insert operation
-    //You will get the DataManager instance in the DataManager parameter
-    //You will get the record in the Value parameter
-
-    public override object Insert(DataManager DataManager, object Value, string Key)
-    {
-
-        //Here, you can implement your own code to update the record from the grid.
-
-        string ConnectionStr = $"Data Source=DESKTOP-TAQKU6P\\SQLEXPRESS;Initial Catalog=Orders;Integrated Security=True;Connect Timeout=30";
-        string QueryStr = $"Insert into Orders(CustomerID) values('{(Value as Order).CustomerID}')";
-        SqlConnection Con = new SqlConnection(ConnectionStr);
-        try
-        {
-            Con.Open();
-            SqlCommand Cmd = new SqlCommand(QueryStr, Con);
-            Cmd.ExecuteNonQuery();
-        }
-        catch (SqlException Exception)
-        {
-            Console.WriteLine(Exception.ToString());
-        }
-        finally
-        {
-            Con.Close();
-        }
-        return Value;
-    }
-
-
-    // Performs Update operation
-    //You will get the DataManager instance in the DataManager parameter
-    //You will get the edited record in the Value parameter
-    //You will get the PrimaryKey field in the KeyField parameter
-
-    public override object Update(DataManager DataManager, object Value, string KeyField, string Key)
-    {
-        //Here, you can implement your own code to update the record from the grid.
-        string ConnectionStr = $"Data Source=DESKTOP-TAQKU6P\\SQLEXPRESS;Initial Catalog=Orders;Integrated Security=True;Connect Timeout=30";
-        string QueryStr = $"Update Orders set CustomerID='{(Value as Order).CustomerID}' where OrderID={(Value as Order).OrderID}";
-        SqlConnection Con = new SqlConnection(ConnectionStr);
-        try
-        {
-            Con.Open();
-            SqlCommand Cmd = new SqlCommand(QueryStr, Con);
-            Cmd.ExecuteNonQuery();
-        }
-        catch (SqlException Exception)
-        {
-            Console.WriteLine(Exception.ToString());
-        }
-        finally
-        {
-            Con.Close();
-        }
-        return Value;
-    }
-
-
-    // Performs Remove operation
-    //You will get the DataManager instance in the DataManager parameter
-    //You will get the record in the Value parameter
-    //You will get the PrimaryKey field in the KeyField parameter
-
-    public override object Remove(DataManager DataManager, object Value, string KeyField, string Key)
-    {
-        //Here, you can implement your own code to delete the record from the grid.
-
-        string ConnectionStr = $"Data Source=DESKTOP-TAQKU6P\\SQLEXPRESS;Initial Catalog=Orders;Integrated Security=True;Connect Timeout=30";
-        string QueryStr = $"Delete from Orders where OrderID={Value}";
-        SqlConnection Con = new SqlConnection(ConnectionStr);
-        try
-        {
-            Con.Open();
-            SqlCommand Cmd = new SqlCommand(QueryStr, Con);
-            Cmd.ExecuteNonQuery();
-        }
-        catch (SqlException Exception)
-        {
-            Console.WriteLine(Exception.ToString());
-        }
-        finally
-        {
-            Con.Close();
-        }
-        return Value;
-    }
-}
-
+</html>*@
