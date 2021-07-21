@@ -233,3 +233,5 @@ D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\obj\De
 D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\obj\Debug\net5.0\ref\SerAppDataGrid.dll
 D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\obj\Debug\net5.0\SerAppDataGrid.pdb
 D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\obj\Debug\net5.0\SerAppDataGrid.genruntimeconfig.cache
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\obj\Debug\net5.0\RazorDeclaration\Pages\Grid.razor.g.cs
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\obj\Debug\net5.0\Razor\Pages\Grid.razor.g.cs
