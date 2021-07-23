@@ -8,39 +8,36 @@
 </style>
 
 
-<div class="btn-group">
-    <button class="btn btn-danger">Button 1</button>
-    <button class="btn btn-default">Button 2</button>
-    <button class="btn btn-info">Button 3</button>
-    <button class="btn btn-primary">Button 4</button>
-    <button class="btn btn-success">Button 5</button>
-    <button class="btn btn-warning">Button 6</button>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-3">                     
+                        <img src="images/bethany.jpg" class="img-fluid w-100" />
+                    </div>
+                    <div class="col-9">
+                        I have a phone object in C# that is returning (Home, work and phone Number)
+                        I like to fill another object with this values that has List of Phones that has Number and Type. I write this code:
+                    </div>
+                </div>     
+      
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
 </div>
 
-<form class="col-sm-6">
-    <div class="form-group">
-        <label for="inputName">Name</label>
-        <input class="form-control" type="text" id="inputName"
-               placeholder="Full Name" />
-    </div>
-    <div class="form-group">
-        <label for="inputDOB">Date of Birth</label>
-        <input class="form-control" type="date" id="inputDOB" />
-    </div>
-    <div class="form-group">
-        <label for="inputEmail">Email</label>
-        <input class="form-control" type="email" id="inputEmail"
-               placeholder="Email address" />
-    </div>
-    <div class="form-group">
-        <label for="inputExperience">Work Experience</label>
-        <input class="form-control" type="number" id="inputExperience"
-               placeholder="Total experience in years" />
-    </div>
-    <div class="form-group">
-        <label for="inputUrl">Personal Website</label>
-        <input class="form-control" type="url" id="inputUrl"
-               placeholder="Your website address" />
-    </div>
-    <button type="submit" class="btn btn-default">Login</button>
-</form>
