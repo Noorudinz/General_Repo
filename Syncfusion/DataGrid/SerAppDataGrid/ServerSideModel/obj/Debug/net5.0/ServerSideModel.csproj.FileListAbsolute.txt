@@ -1,0 +1,12 @@
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\ServerSideModel\bin\Debug\net5.0\ServerSideModel.deps.json
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\ServerSideModel\bin\Debug\net5.0\ServerSideModel.dll
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\ServerSideModel\bin\Debug\net5.0\ref\ServerSideModel.dll
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\ServerSideModel\bin\Debug\net5.0\ServerSideModel.pdb
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\ServerSideModel\obj\Debug\net5.0\ServerSideModel.csproj.AssemblyReference.cache
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\ServerSideModel\obj\Debug\net5.0\ServerSideModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\ServerSideModel\obj\Debug\net5.0\ServerSideModel.AssemblyInfoInputs.cache
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\ServerSideModel\obj\Debug\net5.0\ServerSideModel.AssemblyInfo.cs
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\ServerSideModel\obj\Debug\net5.0\ServerSideModel.csproj.CoreCompileInputs.cache
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\ServerSideModel\obj\Debug\net5.0\ServerSideModel.dll
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\ServerSideModel\obj\Debug\net5.0\ref\ServerSideModel.dll
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\ServerSideModel\obj\Debug\net5.0\ServerSideModel.pdb
