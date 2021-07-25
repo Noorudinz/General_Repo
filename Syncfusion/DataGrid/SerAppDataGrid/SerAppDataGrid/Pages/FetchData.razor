@@ -1,7 +1,7 @@
 ﻿@page "/fetchdata"
 
 @using SerAppDataGrid.Data
-@inject WeatherForecastService ForecastService
+@inherits FetchDataBase
 
 <h1>Weather forecast</h1>
 
@@ -36,11 +36,3 @@ else
     </table>
 }
 
-@code {
-    private WeatherForecast[] forecasts;
-
-    protected override async Task OnInitializedAsync()
-    {
-        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
-    }
-}
