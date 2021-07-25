@@ -1,7 +1,68 @@
 ﻿@page   "/employees"
+@using Syncfusion.Blazor;
+@using ServerSideModel;
+@inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
 
-<h3>Employees</h3>
+@inherits EmployeesBase
 
-@code {
+<h3>Employee List</h3>
 
+<style>
+    .image img {
+        height: 55px;
+        width: 55px;
+        border-radius: 50px;
+        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0,0,0,0.2);
+    }
+</style>
+
+
+@if (Employees == null)
+{
+    <div class="spinner"></div>
+}
+else
+{
+
+    <SfGrid DataSource="Employees" AllowPaging="true" Toolbar="@(new List<string>() { "Add","Edit","Delete","Update","Cancel"})">
+        <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
+
+        <GridColumns>
+            <GridColumn HeaderText="Employee Image" Width="120">
+                <Template>
+                    @{
+                        var EmployeeInfo = (context as Employee);
+                        <div class="image">
+                            <img src="@UriHelper.ToAbsoluteUri(EmployeeInfo.PhotoPath)" alt="@EmployeeInfo.PhotoPath" />
+                        </div>
+                    }
+                </Template>
+            </GridColumn>
+
+            <GridColumn Field=@nameof(Employee.EmployeeId) HeaderText="Emp ID" IsIdentity="true" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120">
+            </GridColumn>
+            <GridColumn Field=@nameof(Employee.FirstName) HeaderText="First Name" Width="150"></GridColumn>
+            <GridColumn Field=@nameof(Employee.LastName) HeaderText="Last Name" Width="150"></GridColumn>
+            <GridColumn Field=@nameof(Employee.PhotoPath) HeaderText="Photo path" Width="150"></GridColumn>
+        </GridColumns>
+    </SfGrid>
+
+    @*<div class="card-deck">
+            @foreach (var employee in Employees)
+            {
+                <div class="card m-3" style="min-width: 18rem; max-width:30.5%;">
+                    <div class="card-header">
+                        <h3>@employee.FirstName @employee.LastName</h3>
+                    </div>
+                    <img class="card-img-top imageThumbnail" src="@employee.PhotoPath" />
+                    <div class="card-footer text-center">
+                        <a href="#" class="btn btn-primary m-1">View</a>
+
+                        <a href="#" class="btn btn-primary m-1">Edit</a>
+
+                        <a href="#" class="btn btn-danger m-1">Delete</a>
+                    </div>
+                </div>
+            }
+        </div>*@
 }
