@@ -17,6 +17,12 @@
     the answer is: <span id="answer"></span>
 </div>
 
+<h3>Get the random numbers</h3>
+<div class="container">
+    the answer is: <span id="randomNumbers"></span>
+</div>
+
+<button class="btn btn-dark" onclick="giveMeRandom(100)">Randomize</button>
 
 @code
 {
@@ -36,4 +42,9 @@
         await JSRuntime.InvokeVoidAsync(identifier: "setElement", "answer", response);
     }
 
+    [JSInvokable]
+    public static Task<int> GetRandomNumbers(int mxVal)
+    {
+        return Task.FromResult(new Random().Next(mxVal));
+    }
 }

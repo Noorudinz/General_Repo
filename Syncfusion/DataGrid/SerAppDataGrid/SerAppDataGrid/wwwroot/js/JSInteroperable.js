@@ -9,3 +9,10 @@ function createPrompt(question) {
 function setElement(id, text) {
     document.getElementById(id).innerText = text;
 }
+
+function giveMeRandom(mxSize) {
+    DotNet.invokeMethodAsync('SerAppDataGrid', 'GetRandomNumbers', mxSize)
+        .then(result => {
+            setElement('randomNumbers', result);
+        });
+}
