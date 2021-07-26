@@ -1,16 +1,39 @@
 ﻿@page "/jsinterop"
-
 @inject IJSRuntime JSRuntime
 
 <h3>JSInterop</h3>
 
-<button @onclick=ButtonClicked>Perform interop</button>
+<button class="btn btn-success" @onclick=ButtonClicked>show alert</button>
+
+<br />
+<br />
+
+<input @bind="question" />
+<br />
+
+<button class="btn btn-success" @onclick=ButtonClickedPrompt>show alert</button>
+
+<div class="container">
+    the answer is: <span id="answer"></span>
+</div>
 
 
 @code
 {
-    private async Task ButtonClicked()
+    async Task ButtonClicked()
     {
-        await JSRuntime.InvokeVoidAsync("alert", "Hello world");
+
+        await JSRuntime.InvokeVoidAsync(identifier: "createAlert");
+
     }
+
+    string question = string.Empty;
+
+    async Task ButtonClickedPrompt()
+    {
+
+        var response = await JSRuntime.InvokeAsync<string>(identifier: "createPrompt", question);
+        await JSRuntime.InvokeVoidAsync(identifier: "setElement", "answer", response);
+    }
+
 }
