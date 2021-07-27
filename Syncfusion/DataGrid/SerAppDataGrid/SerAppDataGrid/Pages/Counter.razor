@@ -5,7 +5,9 @@
 @using Microsoft.AspNetCore.WebUtilities;
 @using Microsoft.Extensions.Primitives;
 @using Syncfusion.Blazor.Inputs;
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 
+@inject ProtectedSessionStorage storage
 @inject NavigationManager navManager
 
 <h1>Counter</h1>
@@ -35,6 +37,21 @@
 
 <h4>Id : @Id </h4>
 
+
+<br />
+<br />
+<h1>session Storage</h1>
+
+@if (showAlert)
+{
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        @Text
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" @onclick="OnDismiss">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+}
+
 <style>
     .control_wrapper {
         width: 350px;
@@ -42,7 +59,30 @@
     }
 </style>
 
+
 @code {
+    private bool showAlert = false;
+
+    [Parameter]
+    public string Text { get; set; } = string.Empty;
+
+    private async Task OnDismiss()
+    {
+        showAlert = false;
+        await storage.SetAsync("NewsAlert.showAlert", false);
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        var result = await storage.GetAsync<bool>("NewsAlert.showAlert");
+        bool oldValue = showAlert;
+        showAlert = result.Success ? result.Value : true;
+
+        if (showAlert != oldValue)
+        {
+            StateHasChanged();
+        }
+    }
+
     [Parameter]
     public Guid Id { get; set; }
 

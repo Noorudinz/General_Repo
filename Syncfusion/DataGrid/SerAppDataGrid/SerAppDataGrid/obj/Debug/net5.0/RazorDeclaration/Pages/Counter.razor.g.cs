@@ -117,6 +117,13 @@ using Syncfusion.Blazor.Inputs;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 8 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Pages\Counter.razor"
+using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
     [Microsoft.AspNetCore.Components.RouteAttribute("/counter1/{Name}")]
     [Microsoft.AspNetCore.Components.RouteAttribute("/routecons/{Id:guid}")]
@@ -128,8 +135,30 @@ using Syncfusion.Blazor.Inputs;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 45 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Pages\Counter.razor"
+#line 63 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Pages\Counter.razor"
        
+    private bool showAlert = false;
+
+    [Parameter]
+    public string Text { get; set; } = string.Empty;
+
+    private async Task OnDismiss()
+    {
+        showAlert = false;
+        await storage.SetAsync("NewsAlert.showAlert", false);
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        var result = await storage.GetAsync<bool>("NewsAlert.showAlert");
+        bool oldValue = showAlert;
+        showAlert = result.Success ? result.Value : true;
+
+        if (showAlert != oldValue)
+        {
+            StateHasChanged();
+        }
+    }
+
     [Parameter]
     public Guid Id { get; set; }
 
@@ -173,6 +202,7 @@ using Syncfusion.Blazor.Inputs;
 #line hidden
 #nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager navManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private ProtectedSessionStorage storage { get; set; }
     }
 }
 #pragma warning restore 1591
