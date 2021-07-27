@@ -104,7 +104,7 @@ using Syncfusion.Blazor.PivotView;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Shared\NavMenu.razor"
+#line 53 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

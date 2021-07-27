@@ -83,6 +83,13 @@ using SerAppDataGrid.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 11 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\_Imports.razor"
+using Syncfusion.Blazor.Grids;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 13 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\_Imports.razor"
 using Syncfusion.Blazor.PivotView;
 
@@ -90,13 +97,28 @@ using Syncfusion.Blazor.PivotView;
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Pages\Counter.razor"
-using Syncfusion.Blazor.Grids;
+#line 4 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Pages\Counter.razor"
+using Microsoft.AspNetCore.WebUtilities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Pages\Counter.razor"
+using Microsoft.Extensions.Primitives;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Pages\Counter.razor"
+using Syncfusion.Blazor.Inputs;
 
 #line default
 #line hidden
 #nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/counter1/{Name}")]
     public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -105,33 +127,48 @@ using Syncfusion.Blazor.Grids;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 21 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Pages\Counter.razor"
+#line 36 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Pages\Counter.razor"
        
-    public List<Order> Orders { get; set; }
+    [Parameter]
+    public string Name { get; set; }
 
-    protected override async Task OnInitializedAsync()
+    public void OnFileRemove(RemovingEventArgs args)
     {
-        await base.OnInitializedAsync();
-        Orders = Enumerable.Range(1, 25).Select(x => new Order()
+        args.PostRawFile = false;
+
+    }
+    private int currentCount = 0;
+
+    protected override void OnInitialized()
+    {
+        StringValues initCount;
+        var uri = navManager.ToAbsoluteUri(navManager.Uri);
+        if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("initialCount", out initCount))
         {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            currentCount = Convert.ToInt32(initCount);
+        }
+
     }
 
-    public class Order
+    private void IncrementCount()
     {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        currentCount++;
     }
+
+    private void QueryParams()
+    {
+        var query = new Dictionary<string, string> {
+            { "firstname", "Noor" },
+            { "lastname", "deen" }
+        };
+        navManager.NavigateTo(QueryHelpers.AddQueryString("/anothereg", query));
+    }
+
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager navManager { get; set; }
     }
 }
 #pragma warning restore 1591

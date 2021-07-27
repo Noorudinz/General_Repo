@@ -1653,6 +1653,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "ServerSideModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ServerSideModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ServerSideModel.dll": {}
+        }
       }
     }
   },
@@ -6244,6 +6254,11 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "ServerSideModel/1.0.0": {
+      "type": "project",
+      "path": "../ServerSideModel/ServerSideModel.csproj",
+      "msbuildProject": "../ServerSideModel/ServerSideModel.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6252,6 +6267,7 @@
       "Microsoft.AspNetCore.OData >= 7.3.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.8",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.8",
+      "ServerSideModel >= 1.0.0",
       "Syncfusion.Blazor >= 19.2.0.47"
     ]
   },
@@ -6281,7 +6297,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Program\\SamplesOnGit\\Syncfusion\\DataGrid\\SerAppDataGrid\\ServerSideModel\\ServerSideModel.csproj": {
+              "projectPath": "D:\\Program\\SamplesOnGit\\Syncfusion\\DataGrid\\SerAppDataGrid\\ServerSideModel\\ServerSideModel.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
