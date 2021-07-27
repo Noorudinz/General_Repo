@@ -1,0 +1,31 @@
+﻿@page "/anothereg"
+
+@using Microsoft.AspNetCore.WebUtilities;
+@using Microsoft.Extensions.Primitives;
+@inject NavigationManager navManager
+
+<h1>Query string Demo</h1>
+
+<p>
+    My name is @name
+</p>
+
+@code {
+    private string name = "";
+
+    protected override void OnInitialized()
+    {
+        StringValues firstname;
+        StringValues lastname;
+
+        var uri = navManager.ToAbsoluteUri(navManager.Uri);
+        if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("firstname", out firstname))
+        {
+            name = firstname + " ";
+        }
+        if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("lastname", out lastname))
+        {
+            name += lastname;
+        }
+    }
+}
