@@ -97,21 +97,21 @@ using Syncfusion.Blazor.PivotView;
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Pages\Counter.razor"
+#line 5 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Pages\Counter.razor"
 using Microsoft.AspNetCore.WebUtilities;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Pages\Counter.razor"
+#line 6 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Pages\Counter.razor"
 using Microsoft.Extensions.Primitives;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Pages\Counter.razor"
+#line 7 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Pages\Counter.razor"
 using Syncfusion.Blazor.Inputs;
 
 #line default
@@ -119,6 +119,7 @@ using Syncfusion.Blazor.Inputs;
 #nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
     [Microsoft.AspNetCore.Components.RouteAttribute("/counter1/{Name}")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/routecons/{Id:guid}")]
     public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -127,8 +128,11 @@ using Syncfusion.Blazor.Inputs;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Pages\Counter.razor"
+#line 45 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Pages\Counter.razor"
        
+    [Parameter]
+    public Guid Id { get; set; }
+
     [Parameter]
     public string Name { get; set; }
 

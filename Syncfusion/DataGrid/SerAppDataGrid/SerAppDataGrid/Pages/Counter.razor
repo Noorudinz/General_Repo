@@ -1,5 +1,6 @@
 ﻿@page "/counter"
 @page "/counter1/{Name}"
+@page "/routecons/{Id:guid}"
 
 @using Microsoft.AspNetCore.WebUtilities;
 @using Microsoft.Extensions.Primitives;
@@ -26,6 +27,14 @@
     </div>
 </div>
 
+
+
+
+<h3>Route Constraints Example</h3>
+
+
+<h4>Id : @Id </h4>
+
 <style>
     .control_wrapper {
         width: 350px;
@@ -34,6 +43,9 @@
 </style>
 
 @code {
+    [Parameter]
+    public Guid Id { get; set; }
+
     [Parameter]
     public string Name { get; set; }
 
