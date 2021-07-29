@@ -1,3 +1,36 @@
 ﻿@page "/grid"
 
 
+
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+
+<SfButton @onclick="@OpenDialog">Open Dialog</SfButton>
+
+<SfDialog Width="250px" ShowCloseIcon="true" IsModal="true" @bind-Visible="@IsVisible">
+    <DialogTemplates>
+        <Header> Dialog </Header>
+        <Content> This is a Dialog with button and primary button </Content>
+    </DialogTemplates>
+    <DialogButtons>
+        <DialogButton Content="OK" IsPrimary="true" OnClick="@CloseDialog" />
+        <DialogButton Content="Cancel" OnClick="@CloseDialog" />
+    </DialogButtons>
+</SfDialog>
+
+
+@code {
+
+    private bool IsVisible { get; set; } = true;
+
+    private void OpenDialog()
+    {
+        this.IsVisible = true;
+    }
+
+    private void CloseDialog()
+    {
+        this.IsVisible = false;
+    }
+
+}
