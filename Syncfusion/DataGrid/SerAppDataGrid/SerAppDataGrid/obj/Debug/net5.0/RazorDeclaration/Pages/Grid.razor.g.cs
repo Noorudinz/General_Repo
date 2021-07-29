@@ -96,6 +96,20 @@ using Syncfusion.Blazor.PivotView;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 5 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Pages\Grid.razor"
+using Syncfusion.Blazor.Popups;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Pages\Grid.razor"
+using Syncfusion.Blazor.Buttons;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/grid")]
     public partial class Grid : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -104,6 +118,48 @@ using Syncfusion.Blazor.PivotView;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 83 "D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\SerAppDataGrid\Pages\Grid.razor"
+       
+
+    private bool IsVisible { get; set; } = true;
+
+    private void OpenDialog()
+    {
+        this.IsVisible = true;
+    }
+
+    private void CloseDialog()
+    {
+        this.IsVisible = false;
+    }
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 5).Select(x => new Order()
+        {
+            OrderID = (new string[] { "string", "string", "string", "string", "string" })[new Random().Next(5)],
+            CustomerID = (new string[] { "string", "string", "string", "string", "string" })[new Random().Next(5)],
+            Freight = (new string[] { "string", "string", "string", "string", "string" })[new Random().Next(5)],
+            OrderDate = (new string[] { "string", "string", "string", "string", "string" })[new Random().Next(5)],
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public string OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string OrderDate { get; set; }
+        public string Freight { get; set; }
+    }
+
+
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591
