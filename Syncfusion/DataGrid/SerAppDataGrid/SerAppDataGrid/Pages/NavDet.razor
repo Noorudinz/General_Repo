@@ -1,5 +1,5 @@
 ﻿@page "/sample"
-
+@using Syncfusion.Blazor.Calendars
 <style>
     .customDiv {
         padding: 10px;
@@ -50,3 +50,25 @@
 </div>
 
 
+<img src="images/bethany.jpg" class="rounded float-start img-fluid img-thumbnail" style="width: 200px; height: 200px;" alt="...">
+<img src="images/bethany.jpg" class="rounded float-end img-fluid img-thumbnail" style="width: 200px; height: 200px;" alt="...">
+
+
+<br />
+<br />
+<br />
+<br />
+
+
+<div class="input-group">
+    <span class="input-group-text">First and last name</span>
+    <div class="form-control">
+        <SfDatePicker TValue="DateTime?" Placeholder='Choose a Date'CssClass="form-control" ></SfDatePicker>
+    </div>
+    <div class="form-control text-sm-center">
+        <button type="button" class="btn btn-outline-primary btn-block">Clear Override Date</button>
+    </div>
+    <div class="form-control text-sm-center">
+        <button type="button" class="btn btn-outline-primary">Use Override Date</button>
+    </div>
+</div>
