@@ -14,6 +14,7 @@ using Syncfusion.Blazor;
 using Blazored.LocalStorage;
 using SerAppDataGrid.Models;
 using Microsoft.EntityFrameworkCore;
+using Blazored.Modal;
 
 namespace SerAppDataGrid
 {
@@ -40,7 +41,8 @@ namespace SerAppDataGrid
             services.AddBlazoredLocalStorage();
             services.AddDbContext<OrdersContext>(opt =>
             opt.UseSqlServer(Configuration.GetConnectionString("OrdersDetailsDatabase")));
-            
+
+            services.AddBlazoredModal();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

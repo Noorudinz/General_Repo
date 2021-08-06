@@ -1,0 +1,11 @@
+﻿@page "/modalPopup"
+
+@inject IModalService modal
+
+<h3>Blazored modal </h3>
+
+<button @onclick="@(()=> modal.Show<Employees>("Modal Example"))" class="btn btn-primary">view</button>
+
+@code {
+
+}
