@@ -1,0 +1,16 @@
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\bin\Debug\net5.0\LoadAssembly.exe
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\bin\Debug\net5.0\LoadAssembly.deps.json
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\bin\Debug\net5.0\LoadAssembly.runtimeconfig.json
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\bin\Debug\net5.0\LoadAssembly.runtimeconfig.dev.json
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\bin\Debug\net5.0\LoadAssembly.dll
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\bin\Debug\net5.0\ref\LoadAssembly.dll
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\bin\Debug\net5.0\LoadAssembly.pdb
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\obj\Debug\net5.0\LoadAssembly.csproj.AssemblyReference.cache
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\obj\Debug\net5.0\LoadAssembly.GeneratedMSBuildEditorConfig.editorconfig
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\obj\Debug\net5.0\LoadAssembly.AssemblyInfoInputs.cache
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\obj\Debug\net5.0\LoadAssembly.AssemblyInfo.cs
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\obj\Debug\net5.0\LoadAssembly.csproj.CoreCompileInputs.cache
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\obj\Debug\net5.0\LoadAssembly.dll
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\obj\Debug\net5.0\ref\LoadAssembly.dll
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\obj\Debug\net5.0\LoadAssembly.pdb
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\obj\Debug\net5.0\LoadAssembly.genruntimeconfig.cache
