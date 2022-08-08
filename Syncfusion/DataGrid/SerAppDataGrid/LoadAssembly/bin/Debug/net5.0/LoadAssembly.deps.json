@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "LoadAssembly/1.0.0": {
+        "dependencies": {
+          "CLProject1": "1.0.0"
+        },
         "runtime": {
           "LoadAssembly.dll": {}
+        }
+      },
+      "CLProject1/1.0.0": {
+        "runtime": {
+          "CLProject1.dll": {}
         }
       }
     }
   },
   "libraries": {
     "LoadAssembly/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CLProject1/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

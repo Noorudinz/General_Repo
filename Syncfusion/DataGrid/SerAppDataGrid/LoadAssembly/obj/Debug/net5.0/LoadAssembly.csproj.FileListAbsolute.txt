@@ -14,3 +14,6 @@ D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\obj\Debu
 D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\obj\Debug\net5.0\ref\LoadAssembly.dll
 D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\obj\Debug\net5.0\LoadAssembly.pdb
 D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\obj\Debug\net5.0\LoadAssembly.genruntimeconfig.cache
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\bin\Debug\net5.0\CLProject1.dll
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\bin\Debug\net5.0\CLProject1.pdb
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\LoadAssembly\obj\Debug\net5.0\LoadAssembly.csproj.CopyComplete

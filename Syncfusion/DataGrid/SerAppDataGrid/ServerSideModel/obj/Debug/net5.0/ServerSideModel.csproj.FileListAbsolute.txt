@@ -9,3 +9,4 @@ D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\ServerSideModel\obj\D
 D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\ServerSideModel\obj\Debug\net5.0\ServerSideModel.dll
 D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\ServerSideModel\obj\Debug\net5.0\ref\ServerSideModel.dll
 D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\ServerSideModel\obj\Debug\net5.0\ServerSideModel.pdb
+D:\Program\SamplesOnGit\Syncfusion\DataGrid\SerAppDataGrid\ServerSideModel\obj\Debug\net5.0\ServerSideModel.csproj.AssemblyReference.cache

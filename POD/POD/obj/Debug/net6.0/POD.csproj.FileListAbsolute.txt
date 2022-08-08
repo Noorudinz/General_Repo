@@ -1,0 +1,15 @@
+D:\Program\SamplesOnGit\POD\POD\bin\Debug\net6.0\POD.exe
+D:\Program\SamplesOnGit\POD\POD\bin\Debug\net6.0\POD.deps.json
+D:\Program\SamplesOnGit\POD\POD\bin\Debug\net6.0\POD.runtimeconfig.json
+D:\Program\SamplesOnGit\POD\POD\bin\Debug\net6.0\POD.dll
+D:\Program\SamplesOnGit\POD\POD\bin\Debug\net6.0\POD.pdb
+D:\Program\SamplesOnGit\POD\POD\obj\Debug\net6.0\POD.csproj.AssemblyReference.cache
+D:\Program\SamplesOnGit\POD\POD\obj\Debug\net6.0\POD.GeneratedMSBuildEditorConfig.editorconfig
+D:\Program\SamplesOnGit\POD\POD\obj\Debug\net6.0\POD.AssemblyInfoInputs.cache
+D:\Program\SamplesOnGit\POD\POD\obj\Debug\net6.0\POD.AssemblyInfo.cs
+D:\Program\SamplesOnGit\POD\POD\obj\Debug\net6.0\POD.csproj.CoreCompileInputs.cache
+D:\Program\SamplesOnGit\POD\POD\obj\Debug\net6.0\POD.dll
+D:\Program\SamplesOnGit\POD\POD\obj\Debug\net6.0\refint\POD.dll
+D:\Program\SamplesOnGit\POD\POD\obj\Debug\net6.0\POD.pdb
+D:\Program\SamplesOnGit\POD\POD\obj\Debug\net6.0\POD.genruntimeconfig.cache
+D:\Program\SamplesOnGit\POD\POD\obj\Debug\net6.0\ref\POD.dll

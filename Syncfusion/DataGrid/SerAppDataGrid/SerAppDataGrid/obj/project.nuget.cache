@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "HGOj5B4HJIG2Qbv+rc3E5kXGKSZ8+Hq3Dnhvh80/BjGQcTDQHBjkreSZGcj98fHxUzA2ZFekQ/MqGMoHO9xIzg==",
+  "dgSpecHash": "BmEvYP+ixKH4utta387sfUkK/5qUbAzVmBLYAaXCcBY4XZXFsUct8ZCkj6h9EDfTWeVENMK3cbLnhHrx3CWZlg==",
   "success": true,
   "projectFilePath": "D:\\Program\\SamplesOnGit\\Syncfusion\\DataGrid\\SerAppDataGrid\\SerAppDataGrid\\SerAppDataGrid.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\blazored.localstorage\\4.1.2\\blazored.localstorage.4.1.2.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\blazored.modal\\6.0.1\\blazored.modal.6.0.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\bunit.core\\1.1.5\\bunit.core.1.1.5.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.5\\microsoft.aspnetcore.authorization.5.0.5.nupkg.sha512",
@@ -41,6 +42,7 @@
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\5.6.0\\microsoft.identitymodel.protocols.openidconnect.5.6.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.identitymodel.tokens\\5.6.0\\microsoft.identitymodel.tokens.5.6.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.jsinterop\\5.0.5\\microsoft.jsinterop.5.0.5.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.jsinterop.webassembly\\3.2.1\\microsoft.jsinterop.webassembly.3.2.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.odata.core\\7.6.1\\microsoft.odata.core.7.6.1.nupkg.sha512",

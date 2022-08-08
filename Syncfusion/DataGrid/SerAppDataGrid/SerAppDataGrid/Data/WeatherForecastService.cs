@@ -9,10 +9,15 @@ namespace SerAppDataGrid.Data
 {
     public class WeatherForecastService
     {
+
+
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+            
         };
+
+           
 
         //[Inject]
         //private IMemoryCache memoryCache { get; set; }

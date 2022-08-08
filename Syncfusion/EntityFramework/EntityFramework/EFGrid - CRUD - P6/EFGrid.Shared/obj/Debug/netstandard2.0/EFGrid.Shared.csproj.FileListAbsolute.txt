@@ -1,8 +1,0 @@
-D:\Program\Syncfusion\EntityFramework\EntityFramework\EFGrid - CRUD - P6\EFGrid.Shared\bin\Debug\netstandard2.0\EFGrid.Shared.deps.json
-D:\Program\Syncfusion\EntityFramework\EntityFramework\EFGrid - CRUD - P6\EFGrid.Shared\bin\Debug\netstandard2.0\EFGrid.Shared.dll
-D:\Program\Syncfusion\EntityFramework\EntityFramework\EFGrid - CRUD - P6\EFGrid.Shared\bin\Debug\netstandard2.0\EFGrid.Shared.pdb
-D:\Program\Syncfusion\EntityFramework\EntityFramework\EFGrid - CRUD - P6\EFGrid.Shared\obj\Debug\netstandard2.0\EFGrid.Shared.AssemblyInfoInputs.cache
-D:\Program\Syncfusion\EntityFramework\EntityFramework\EFGrid - CRUD - P6\EFGrid.Shared\obj\Debug\netstandard2.0\EFGrid.Shared.AssemblyInfo.cs
-D:\Program\Syncfusion\EntityFramework\EntityFramework\EFGrid - CRUD - P6\EFGrid.Shared\obj\Debug\netstandard2.0\EFGrid.Shared.csproj.CoreCompileInputs.cache
-D:\Program\Syncfusion\EntityFramework\EntityFramework\EFGrid - CRUD - P6\EFGrid.Shared\obj\Debug\netstandard2.0\EFGrid.Shared.dll
-D:\Program\Syncfusion\EntityFramework\EntityFramework\EFGrid - CRUD - P6\EFGrid.Shared\obj\Debug\netstandard2.0\EFGrid.Shared.pdb

@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerAppDataGrid", "SerAppDat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerSideModel", "ServerSideModel\ServerSideModel.csproj", "{5C6D6025-F0F9-41D2-A55F-5B6FF1CA82DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadAssembly", "LoadAssembly\LoadAssembly.csproj", "{406005E4-5EFA-4F7A-99DB-2B34F1EA8911}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLProject1", "CLProject1\CLProject1.csproj", "{6D864966-CF51-4CF4-B4F6-F6CA8D67919D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{5C6D6025-F0F9-41D2-A55F-5B6FF1CA82DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C6D6025-F0F9-41D2-A55F-5B6FF1CA82DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C6D6025-F0F9-41D2-A55F-5B6FF1CA82DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{406005E4-5EFA-4F7A-99DB-2B34F1EA8911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{406005E4-5EFA-4F7A-99DB-2B34F1EA8911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{406005E4-5EFA-4F7A-99DB-2B34F1EA8911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{406005E4-5EFA-4F7A-99DB-2B34F1EA8911}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D864966-CF51-4CF4-B4F6-F6CA8D67919D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D864966-CF51-4CF4-B4F6-F6CA8D67919D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D864966-CF51-4CF4-B4F6-F6CA8D67919D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D864966-CF51-4CF4-B4F6-F6CA8D67919D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
