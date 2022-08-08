@@ -1,0 +1,15 @@
+D:\Program\SamplesOnGit\POD\ConsoleAppPOD\bin\Debug\net6.0\ConsoleAppPOD.exe
+D:\Program\SamplesOnGit\POD\ConsoleAppPOD\bin\Debug\net6.0\ConsoleAppPOD.deps.json
+D:\Program\SamplesOnGit\POD\ConsoleAppPOD\bin\Debug\net6.0\ConsoleAppPOD.runtimeconfig.json
+D:\Program\SamplesOnGit\POD\ConsoleAppPOD\bin\Debug\net6.0\ConsoleAppPOD.dll
+D:\Program\SamplesOnGit\POD\ConsoleAppPOD\bin\Debug\net6.0\ConsoleAppPOD.pdb
+D:\Program\SamplesOnGit\POD\ConsoleAppPOD\obj\Debug\net6.0\ConsoleAppPOD.csproj.AssemblyReference.cache
+D:\Program\SamplesOnGit\POD\ConsoleAppPOD\obj\Debug\net6.0\ConsoleAppPOD.GeneratedMSBuildEditorConfig.editorconfig
+D:\Program\SamplesOnGit\POD\ConsoleAppPOD\obj\Debug\net6.0\ConsoleAppPOD.AssemblyInfoInputs.cache
+D:\Program\SamplesOnGit\POD\ConsoleAppPOD\obj\Debug\net6.0\ConsoleAppPOD.AssemblyInfo.cs
+D:\Program\SamplesOnGit\POD\ConsoleAppPOD\obj\Debug\net6.0\ConsoleAppPOD.csproj.CoreCompileInputs.cache
+D:\Program\SamplesOnGit\POD\ConsoleAppPOD\obj\Debug\net6.0\ConsoleAppPOD.dll
+D:\Program\SamplesOnGit\POD\ConsoleAppPOD\obj\Debug\net6.0\refint\ConsoleAppPOD.dll
+D:\Program\SamplesOnGit\POD\ConsoleAppPOD\obj\Debug\net6.0\ConsoleAppPOD.pdb
+D:\Program\SamplesOnGit\POD\ConsoleAppPOD\obj\Debug\net6.0\ConsoleAppPOD.genruntimeconfig.cache
+D:\Program\SamplesOnGit\POD\ConsoleAppPOD\obj\Debug\net6.0\ref\ConsoleAppPOD.dll
