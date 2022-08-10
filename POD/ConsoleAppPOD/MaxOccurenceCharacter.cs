@@ -34,5 +34,20 @@ namespace ConsoleAppPOD
 
             Console.WriteLine(resultChar);
         }
+
+        //Exact program for maximum char occurence using linq and dictionary
+        public static void getMaxCharOccurence()
+        {
+            string message = "This is the program of csharp done by noorudin";
+            Dictionary<char, int> dict = message.Replace(" ", string.Empty)
+                                           .GroupBy(c => c)
+                                           .ToDictionary(gr => gr.Key, gr => gr.Count());
+
+            foreach (var e in dict)
+            {
+                if (dict.Values.Max() == e.Value)
+                    Console.WriteLine("Character '" + e.Key + "' occur number of times is " + e.Value);
+            }
+        }
     }
 }
