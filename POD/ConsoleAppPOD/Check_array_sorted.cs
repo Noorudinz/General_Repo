@@ -48,7 +48,9 @@ namespace ConsoleAppPOD
 
             for (int i = 1; i < n; i++)
             {
-                if (arr[i - 1] > arr[i]) //check if unsorted pair found
+                //check if unsorted pair found
+                //if you reverse (arr[i - 1] < arr[i]) will check given array is in descending order or not
+                if (arr[i - 1] > arr[i]) 
                     return false;
             }
 
