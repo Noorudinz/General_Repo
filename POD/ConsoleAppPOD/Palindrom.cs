@@ -47,5 +47,29 @@ namespace ConsoleAppPOD
                 Console.WriteLine("String is not palindrome");
         }
 
+        //Palindrome function using array
+        public static void PalindromArray()
+        {
+            int[] arr = { 1, 2, 3, 4, 1 };
+            int n = arr.Length;
+            int flag = 0;
+
+            // Loop till array size n/2.
+            for (int i = 0; i <= n / 2 && n != 0; i++)
+            {
+                // Check if first and last element are different and so on
+                if (arr[i] != arr[n - i - 1])
+                {
+                    flag = 1;
+                    break;
+                }
+            }
+
+            if (flag == 0)
+                Console.WriteLine("Given array is palindrome");
+            else
+                Console.WriteLine("Given array is not palindrome");
+        }
+
     }
 }
