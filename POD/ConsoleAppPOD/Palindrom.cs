@@ -33,7 +33,18 @@ namespace ConsoleAppPOD
         //Palindrome function using strings
         public static void PalindromStrings()
         {
+            string givenStr = "abbna";
+            string reverse = string.Empty;
 
+            for (int i = givenStr.Length - 1; i >= 0; i--)
+            {
+                reverse = reverse + givenStr[i];
+            }
+
+            if (reverse == givenStr)
+                Console.WriteLine("String is palindrome");
+            else
+                Console.WriteLine("String is not palindrome");
         }
 
     }
