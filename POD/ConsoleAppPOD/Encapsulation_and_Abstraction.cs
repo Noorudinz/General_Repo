@@ -33,11 +33,11 @@ namespace ConsoleAppPOD
 
     class Encapsulation_and_Abstraction
     {
-        static void Main(string[] args)
-        {
-            Employee emp = new Employee();
-            emp.CheckEmployee(1);
-        }
+        //static void Main(string[] args)
+        //{
+        //    Employee emp = new Employee();
+        //    emp.CheckEmployee(1);
+        //}
 
     }
 }
