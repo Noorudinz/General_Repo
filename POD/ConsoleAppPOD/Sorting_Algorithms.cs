@@ -42,5 +42,46 @@ namespace ConsoleAppPOD
                 Console.Write(arr[i] + " ");
             Console.WriteLine();
         }
+
+        public void BubbleSort()
+        {
+            //Bubble sort starts with very first two elements, comparing them to check which one is greater.
+            //loop i 1st pass:
+            // loop j: 52, 54, 42, 74, 89, 26, 88
+            //loop i 2nd pass:
+            // loop j: 52, 42, 54, 74, 26, 88, 89  
+            //loop i 3rd pass:
+            // loop j: 42, 52, 54, 26, 74, 88, 89 
+            //loop i 4th pass:
+            // loop j: 42, 52, 26, 54, 74, 88, 89 
+            //loop i 5th pass:
+            // loop j: 42, 26, 52, 54, 74, 88, 89 
+            //loop i 6th pass:
+            // loop j: 26, 42, 52, 54, 74, 88, 89 
+            // loop i 7th pass:
+            // Now, the array is already sorted, but our algorithm does not know if it is completed.
+            // The algorithm needs one whole pass without any swap to know it is sorted.
+
+            int[] arr = { 54, 52, 74, 42, 89, 26, 88 };
+            int n = arr.Length;
+
+            for (int i = 0; i < n - 1; i++)
+            {
+                for (int j = 0; j < n - i - 1; j++)
+                {
+                    //compare two element next to next to swap arr[i]
+                    if (arr[j] > arr[j + 1])
+                    {
+                        int temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+
+            for (int i = 0; i < n; i++)
+                Console.Write(arr[i] + " ");
+            Console.WriteLine();
+        }
     }
 }
