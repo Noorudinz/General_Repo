@@ -7,16 +7,17 @@ using System.Threading.Tasks;
 namespace ConsoleAppPOD
 {
     public class Sorting_Algorithms
-    {
-        //selection sort loop
-        //loop 1: 26, 52, 74, 42, 89, 54, 88
-        //loop 2: 26, 42, 74, 52, 89, 54, 88
-        //loop 3: 26, 42, 52, 74, 89, 54, 88
-        //loop 4: 26, 42, 52, 54, 89, 74, 88
-        //loop 5: 26, 42, 52, 54, 74, 89, 88
-        //loop 6: 26, 42, 52, 54, 74, 88, 89
+    {        
         public void SelectionSort()
         {
+            //selection sort loop
+            //loop 1: 26, 52, 74, 42, 89, 54, 88
+            //loop 2: 26, 42, 74, 52, 89, 54, 88
+            //loop 3: 26, 42, 52, 74, 89, 54, 88
+            //loop 4: 26, 42, 52, 54, 89, 74, 88
+            //loop 5: 26, 42, 52, 54, 74, 89, 88
+            //loop 6: 26, 42, 52, 54, 74, 88, 89
+
             int[] arr = { 54, 52, 74, 42, 89, 26, 88 };
             int n = arr.Length;
 
@@ -82,6 +83,65 @@ namespace ConsoleAppPOD
             for (int i = 0; i < n; i++)
                 Console.Write(arr[i] + " ");
             Console.WriteLine();
+        }
+
+        public void MergeSort()
+        {
+            //Merge sort
+            //54, 52, 74, 42, 89, 26, 88
+            //split 1: 54,52,74 | 42,89,26,88
+            //split 2: 54 | 52,74 | 42,89 | 26,88
+            //merge 1: 54 | 52,74 | 42,89 | 26,88
+            //merge 2: 52,54,74 | 26,42,88,89
+            //merge 3: 26,42,52,54,74,88,89
+
+            //int[] numbers = { 54, 52, 74, 42, 89, 26, 88 };
+            int[] numbers = { 54, 52, 74, 42 };
+            int max = numbers.Length;
+
+            SortMerge(numbers, 0, max - 1);
+
+            for (int i = 0; i < max; i++)
+                Console.Write(numbers[i] + " ");
+            Console.ReadLine();
+        }
+
+        static public void SortMerge(int[] numbers, int left, int right)
+        {
+            int mid;
+            if (right > left)
+            {
+                mid = (right + left) / 2;
+                SortMerge(numbers, left, mid);
+                SortMerge(numbers, (mid + 1), right);
+                MainMerge(numbers, left, (mid + 1), right);
+            }
+        }
+
+        static public void MainMerge(int[] numbers, int left, int mid, int right)
+        {
+            int[] temp = new int[25];
+            int i, eol, num, pos;
+            eol = (mid - 1);
+            pos = left;
+            num = (right - left + 1);
+
+            while ((left <= eol) && (mid <= right))
+            {
+                if (numbers[left] <= numbers[mid])
+                    temp[pos++] = numbers[left++];
+                else
+                    temp[pos++] = numbers[mid++];
+            }
+            while (left <= eol)
+                temp[pos++] = numbers[left++];
+            while (mid <= right)
+                temp[pos++] = numbers[mid++];
+            for (i = 0; i < num; i++)
+            {
+                numbers[right] = temp[right];
+                right--;
+            }
         }
     }
 }
