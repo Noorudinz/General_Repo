@@ -143,5 +143,69 @@ namespace ConsoleAppPOD
                 right--;
             }
         }
+
+        public void QuickSort()
+        {
+            //Quick sort
+            //54, 52, 74, 42, 89, 26, 88 
+            //26, 52, 74, 42, 89, 54, 88
+            //26, 52, 54, 42, 89, 74, 88
+            //26, 54, 52, 54, 89, 74, 88
+            //26, 42, 52, 54, 88, 74, 89
+            //26, 42, 52, 54, 88, 74, 89
+            //26, 42, 52, 54, 74, 88, 89
+
+            int[] arr = { 54, 52, 74, 42, 89, 26, 88 };
+            int n = arr.Length;
+
+            quickSort(arr, 0, n - 1);
+
+            for (int i = 0; i < n; i++)
+                Console.Write(arr[i] + " ");
+        }
+
+        static public void quickSort(int[] arr, int left, int right)
+        {
+            int pivot;
+            if (left < right)
+            {
+                pivot = Partition(arr, left, right);
+                if (pivot > 1)
+                {
+                    quickSort(arr, left, pivot - 1);
+                }
+                if (pivot + 1 < right)
+                {
+                    quickSort(arr, pivot + 1, right);
+                }
+            }
+        }
+
+        static public int Partition(int[] arr, int left, int right)
+        {
+            int pivot;
+            pivot = arr[left];
+            while (true)
+            {
+                while (arr[left] < pivot)
+                {
+                    left++;
+                }
+                while (arr[right] > pivot)
+                {
+                    right--;
+                }
+                if (left < right)
+                {
+                    int temp = arr[right];
+                    arr[right] = arr[left];
+                    arr[left] = temp;
+                }
+                else
+                {
+                    return right;
+                }
+            }
+        }
     }
 }
