@@ -33,7 +33,24 @@ namespace ConsoleAppPOD
         //Print prime number between 100 to 200
         public static void DisplayPrimeNumbers()
         {
+            bool isPrime = true;
 
+            for (int i = 100; i <= 200; i++)
+            {
+                for (int j = 2; j <= 200; j++)
+                {
+                    if (i != j && i % j == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+                }
+
+                if (isPrime)
+                    Console.Write("\t" + i);
+
+                isPrime = true;
+            }
         }
     }
 }
