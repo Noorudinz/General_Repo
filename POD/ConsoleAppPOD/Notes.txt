@@ -1,0 +1,10 @@
+﻿
+1. Complete Guide on Strings with Interview Questions
+https://www.geeksforgeeks.org/complete-guide-on-strings-with-interview-questions/?ref=gcse
+
+2. Top Data Structures That Every Programmer Must Know
+https://www.geeksforgeeks.org/top-data-structures-that-every-programmer-must-know/
+
+3. Complete Guide on Arrays with Interview Questions
+https://www.geeksforgeeks.org/complete-guide-on-arrays-with-interview-questions/
+https://www.geeksforgeeks.org/top-50-array-coding-problems-for-interviews/?ref=leftbar-rightbar
