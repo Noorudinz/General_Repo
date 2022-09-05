@@ -19,9 +19,11 @@ namespace ConsoleAppPOD.ArrayProgram
 
             for (int i = 1; i < n; i++)
             {
+                //find max element and store to compare in next loop
                 if (arr[i] > max)
                     max = arr[i];
 
+                //find min element and store to compare in next loop
                 if (arr[i] < min)
                     min = arr[i];
             }
