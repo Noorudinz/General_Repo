@@ -17,7 +17,7 @@ namespace ConsoleAppPOD
             int maxValue = 0;
             char resultChar = '\0'; //char initialization
 
-            String givenStr = Console.ReadLine();
+            string givenStr = Console.ReadLine();
 
             for (int i = 0; i < givenStr.Length; i++)
             {
